@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="0; url=https://pro.football.fun/profile">
-<title>Referrer Test</title>
+    <title>Referrer XSS Test</title>
 </head>
 <body>
-Redirecting...
+    <h1>Testing Referrer XSS</h1>
+    <p>Click the link below to test:</p>
+    <a href="https://pro.football.fun/profile/Leaderboard/" target="_blank">Test Target Site</a>
+    
+    <!-- Auto redirect for testing -->
+    <script>
+        setTimeout(() => {
+            window.open('https://pro.football.fun/profile/Leaderboard/', '_blank');
+        }, 3000);
+    </script>
 </body>
 </html>
